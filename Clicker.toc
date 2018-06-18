@@ -4,6 +4,6 @@
 ## Author: CsakiTheOne
 ## Version: 0.1
 
-## SavedVariables: score
+## SavedVariables: score, auto
 
 Clicker.lua
