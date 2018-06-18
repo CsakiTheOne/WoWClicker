@@ -1,0 +1,9 @@
+## Interface: 70100
+## Title: Clicker
+## Notes: This adds a minigame to the UI.
+## Author: CsakiTheOne
+## Version: 0.1
+
+## SavedVariables: score
+
+Clicker.lua
