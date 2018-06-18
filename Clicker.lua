@@ -21,7 +21,7 @@ frame.btna:SetSize(50, 23);
 frame.btna:SetText("+auto");
 frame.btna:SetScript("OnClick", function(self, arg1)
     auto = auto + 1;
-    score = score - auto;
+    score = score - (auto * auto);
     frame.lblScore:SetText("Score: " .. score);
 end);
 
@@ -34,14 +34,14 @@ frame.btnc:SetScript("OnClick", function(self, arg1)
     frame.lblScore:SetText("Score: " .. score);
 end);
 
-local timer = 1;
 frame:SetScript("OnUpdate", function(self, elapsed)
-    if (timer > 2.5) then
-        score = score + auto / 20;
-        frame.lblScore:SetText("Score: " .. score);
-        timer = 1;
-    else timer = timer + 1;
-    end
+    frame.btna:SetEnabled(score > (auto + 1) * (auto + 1));
+    score = score + auto / 25;
+    frame.lblScore:SetText("Score: " .. round(score, 0));
 end);
+
+function round(num, numDecimalPlaces)
+    return tonumber(string.format("%." .. (numDecimalPlaces or 0) .. "f", num))
+end
 
 tick();
