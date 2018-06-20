@@ -4,4 +4,4 @@
 
 1. Download this repository
 2. Extract the zip file
-3. Put the folder in ".\\World of Warcraft\\Interface\\AddOns"
+3. Rename the folder to "Clicker" and put it in ".\\World of Warcraft\\Interface\\AddOns"
